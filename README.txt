@@ -28,9 +28,9 @@ unique identifier for this application and a call to the registration script.
 
 ::
 
-    echo "export MONUPCO_USER_ID=YourUserID" >> $VIRTUAL_ENV/bin/postactivate
-    echo "export MONUPCO_UUID=`uuidgen`"     >> $VIRTUAL_ENV/bin/postactivate
-    echo "./bin/monupvo-virtualenv-python"   >> $VIRTUAL_ENV/bin/postactivate
+    echo "export MONUPCO_USER_ID=YourUserID"          >> $VIRTUAL_ENV/bin/postactivate
+    echo "export MONUPCO_UUID=`uuidgen`"              >> $VIRTUAL_ENV/bin/postactivate
+    echo "\$VIRTUAL_ENV/bin/monupco-virtualenv-python" >> $VIRTUAL_ENV/bin/postactivate
 
 Activate your virtualenv again so that changes take place.
 
