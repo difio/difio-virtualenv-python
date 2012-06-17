@@ -22,8 +22,8 @@ Install this package
 
     pip install monupco-virtualenv-python
 
-Configure $VIRTUAL_ENV/bin/postactivate hook to contain 
-your Monupco userID (https://monupco-otb.rhcloud.com/profiles/mine/), 
+Configure `$VIRTUAL_ENV/bin/postactivate` hook to contain
+your Monupco userID (https://monupco-otb.rhcloud.com/profiles/mine/),
 unique identifier for this application and a call to the registration script.
 
 ::
@@ -33,6 +33,10 @@ unique identifier for this application and a call to the registration script.
     echo "./bin/monupvo-virtualenv-python"   >> $VIRTUAL_ENV/bin/postactivate
 
 Activate your virtualenv again so that changes take place.
+
+::
+
+    workon myapp
 
 If everything goes well you should see something like:
 
