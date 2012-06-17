@@ -44,6 +44,13 @@ If everything goes well you should see something like:
 
     Monupco: Success, registered/updated application with id 49
 
-
 That's it, you can now check your application statistics at
 <http://monupco.com>
+
+
+Notes
+-----
+
+* Monupco will try to user your virtualenv name as the application name;
+* Application type is "python" followed by the interpreter version;
+* Application URL is the system hostname prepended with http:// which could be incorrect.
