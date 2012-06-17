@@ -51,6 +51,6 @@ That's it, you can now check your application statistics at
 Notes
 -----
 
-* Monupco will try to user your virtualenv name as the application name;
+* Monupco will try to use your virtualenv name as the application name;
 * Application type is "python" followed by the interpreter version;
 * Application URL is the system hostname prepended with http:// which could be incorrect.
