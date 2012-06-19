@@ -76,6 +76,6 @@ That's it, you can now check your application statistics at
 Notes
 -----
 
-* Monupco will try to use your virtualenv name as the application name;
+* Monupco will use the basepath of your virtualenv as the application name. To override use environment variable ``MONUPCO_APP_NAME``;
 * Application type is "python" followed by the interpreter version;
-* Application URL is the system hostname prepended with http:// which could be incorrect.
+* Application URL is the system hostname prepended with http://.  To override use environment variable ``MONUPCO_APP_URL`` including the protocol string.
