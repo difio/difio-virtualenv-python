@@ -11,8 +11,11 @@ def get_name_version():
         return (name, version)
     raise RuntimeError('No version info found.')
 
-with open('README.rst') as file:
-    long_description = file.read()
+def get_long_description():
+    with open('README.rst') as file:
+        return file.read()
+
+    return ""
 
 (name, version) = get_name_version()
 
@@ -39,5 +42,5 @@ setup(
         "Topic :: System :: Monitoring",
         "Topic :: System :: Systems Administration",
         ],
-    long_description = long_description,
+    long_description = get_long_description(),
      )
