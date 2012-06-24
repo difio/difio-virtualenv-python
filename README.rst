@@ -77,5 +77,7 @@ Notes
 -----
 
 * Monupco will use the basepath of your virtualenv as the application name. To override use environment variable ``MONUPCO_APP_NAME``;
+* Package ``virtualenv`` will also be added to the list of installed packages if you have created your virtualenv with ``--system-site-packages`` option.
+Otherwise use environment variable ``MONUPCO_VIRTUALENV_VERSION`` to override;
 * Application type is "python" followed by the interpreter version;
 * Application URL is the system hostname prepended with http://.  To override use environment variable ``MONUPCO_APP_URL`` including the protocol string.

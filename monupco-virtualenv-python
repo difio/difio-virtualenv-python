@@ -58,6 +58,18 @@ data = {
 for dist in get_installed_distributions(local_only=True):
     data['installed'].append({'n' : dist.project_name, 'v' : dist.version})
 
+
+virtualenv_version = None
+
+try:
+    from virtualenv import virtualenv_version
+except ImportError, NameError:
+    if os.environ.has_key('MONUPCO_VIRTUALENV_VERSION'):
+        virtualenv_version = os.environ['MONUPCO_VIRTUALENV_VERSION']
+
+if virtualenv_version:
+    data['installed'].append({'n' : 'virtualenv', 'v' : virtualenv_version})
+
 json_data = json.dumps(data)
 params = urllib.urlencode({'json_data' : json_data})
 headers = {"User-agent": "%s/%s" % (version.name, version.version)}
