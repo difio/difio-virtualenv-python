@@ -1,2 +1,2 @@
 name = 'difio-virtualenv-python'
-version='3.0'
+version = '3.1'

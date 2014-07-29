@@ -3,22 +3,27 @@
 import os
 from distutils.core import setup
 
+main_ns = {
+    'name' : None,
+    'version' : None,
+}
 def get_name_version():
     basedir = os.path.dirname(__file__)
     with open(os.path.join(basedir, 'difio_virtualenv_python/version.py')) as f:
-        (name, version) = (None, None)
-        exec(f.read())
-        return (name, version)
+        exec(f.read(), main_ns)
+        return
     raise RuntimeError('No version info found.')
 
 with open('README.rst') as file:
     long_description = file.read()
 
-(name, version) = get_name_version()
+get_name_version()
+
+print("DEBUG", main_ns['name'], main_ns['version'])
 
 setup(
-    name=name,
-    version=version,
+    name=main_ns['name'],
+    version=main_ns['version'],
     description='Difio registration agent for stand-alone Python virtualenv applications',
     author='Alexander Todorov',
     author_email='atodorov@nospam.dif.io',
@@ -26,6 +31,7 @@ setup(
     packages=['difio_virtualenv_python'],
     scripts=['difio-virtualenv-python'],
     keywords = ['virtualenv', 'difio', 'updates'],
+    license = 'MIT',
     classifiers = [
         "Programming Language :: Python",
         "Programming Language :: Python :: 3",
