@@ -19,8 +19,6 @@ with open('README.rst') as file:
 
 get_name_version()
 
-print("DEBUG", main_ns['name'], main_ns['version'])
-
 setup(
     name=main_ns['name'],
     version=main_ns['version'],
